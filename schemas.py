@@ -5,11 +5,11 @@ from typing import List
 class BlogBase(BaseModel):
     title: str
     body: str | None = None
-    
+
 
 class Blog(BlogBase):
     author_id: int
-    
+
 
 class BaseUser(BaseModel):
     name: str
@@ -19,16 +19,17 @@ class BaseUser(BaseModel):
 
 class User(BaseUser):
     password: str
-    
+
 
 class ShowUser(BaseUser):
     blogs: List[BlogBase] = []
 
-    class ConfigDict():
+    class ConfigDict:
         from_attributes = True
 
 
 class ShowBlog(BlogBase):
     author: BaseUser
-    class ConfigDict():
+
+    class ConfigDict:
         from_attributes = True
