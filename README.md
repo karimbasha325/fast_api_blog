@@ -1,4 +1,4 @@
-﻿# This is a sample project builted using Fast API 
+﻿# A basic FastAPI project for the beginners to start off. 
 1. Install Python
 2. Create virtual environment
    
